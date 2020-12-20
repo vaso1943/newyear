@@ -1,3 +1,140 @@
 body{
-    background-image: url("img/11.jpg");
+    background-color: black;
+}
+#snow{
+    background-image: url("img/snow_1.png"), url("img/snow_2.png"), url("img/snow_3.png");
+    z-index: 1;
+
+    animation: snow 5s linear infinite;
+}
+@keyframes snow{
+    0%{
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+
+    
+    100%{
+        background-position: 500px 750px, 150px 1500px, -175px 1500px;
+    }
+}
+
+@-o-keyframes snow{
+    0%{
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+
+    100%{
+        background-position: 500px 750px, 150px 1500px, -175px 1500px;
+    }
+}
+
+@-moz-keyframes snow{
+    0%{
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+
+    99%{
+        background-position: 500px 750px, 150px 1500px, -175px 1500px;
+    }
+    100%{
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+}
+
+@-webkit-keyframes snow{
+    0%{
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+
+    100%{
+        background-position: 500px 750px, 150px 1500px, -175px 1500px;
+    }
+}
+#tree{
+    position: fixed;
+    left: calc(50%);
+
+    background-image: url("img/tree.png");
+    background-size: contain;
+    width: 160px;
+    height: 250px;
+    left: 600px;
+}
+
+#toy1{
+    position: relative;
+    width: 26px;
+    left: 41px;
+    top: 160px;
+    transform-origin: top;
+    animation: toyShake linear 3s infinite;
+}
+#toy2{
+    position: relative;
+    width: 26px;
+    left: 40px;
+    top: 80px;
+    transform-origin: top;
+    animation: toyShake linear 3s infinite;
+}
+#toy3{
+    position: relative;
+    width: 26px;
+    left: 30px;
+    top: 130px;
+    transform-origin: top;
+    animation: toyShake linear 3s infinite;
+}
+@keyframes toyShake{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+#countdown{
+    position: absolute;
+    left: 2%;
+    top: 80%;
+    font-size: 30px;
+    color: beige;
+    font-family: 'Russo One', sans-serif;
+}
+
+#player>img{
+    position: relative;
+    width: 40px;
+
+    left: 16px;
+    top: 95px;
+    filter: invert(26%) sepia(17%) saturate(3543%) hue-rotate(66deg) brightness(96%) contrast(98%);
+}
+
+@font-face {
+    font-family: 'Mountains of Christmas';
+    font-style: normal;
+    src: local("Mountains of Christmas"), local("MountainsofChristmas-Regular"), url(https://fonts.gstatic.com/s/mountainsofchristmas/v8/dVGBFPwd6G44IWDbQtPewylJhLDHyIrT3I5b5eGTHmw.woff2) format("woff2");
+  }
+
+#graz{
+    position: absolute;
+    left: 31%;
+    top: 40%;
+    color: darkturquoise;
+    font-family: 'Mountains of Christmas';
+    user-select: none;
+}
+#graz>h1{
+    font-size: 60pt;
 }
